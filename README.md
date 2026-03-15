@@ -1,7 +1,5 @@
 # 💼 JobPortal - Premium Career Connection Platform
 
-**Live Demo**: [https://job-portal-aayush-kumar.netlify.app](https://job-portal-aayush-kumar.netlify.app)
-
 JobPortal is a sophisticated, full-stack career platform designed to bridge the gap between top-tier talent and world-class organizations. Built with a focus on performance, aesthetics, and user experience, it provides a seamless workflow for both job seekers and recruiters.
 
 ## 🚀 Key Features
