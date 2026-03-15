@@ -1,4 +1,4 @@
-0# 💼 JobPortal - Premium Career Connection Platform
+# 💼 JobPortal - Premium Career Connection Platform
 
 JobPortal is a sophisticated, full-stack career platform designed to bridge the gap between top-tier talent and world-class organizations. Built with a focus on performance, aesthetics, and user experience, it provides a seamless workflow for both job seekers and recruiters.
 
