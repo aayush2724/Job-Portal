@@ -1,6 +1,7 @@
 {
-  "name": "job-portal",
-  "version": "0.1.0",
+  "name": "job-portal-platform",
+  "version": "1.0.0",
+  "description": "A high-end, full-stack career connection platform built with Next.js",
   "private": true,
   "scripts": {
     "dev": "next dev",

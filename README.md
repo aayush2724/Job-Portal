@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💼 JobPortal - Premium Career Connection Platform
 
-## Getting Started
+JobPortal is a sophisticated, full-stack career platform designed to bridge the gap between top-tier talent and world-class organizations. Built with a focus on performance, aesthetics, and user experience, it provides a seamless workflow for both job seekers and recruiters.
 
-First, run the development server:
+## 🚀 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### For Candidates
+*   **Intuitive Job Discovery**: Advanced filtering and search to find roles that match your passion.
+*   **One-Click Applications**: Streamlined process to apply and track your application status.
+*   **Professional Profiles**: Showcase your skills, experience, and resume with a premium, focused layout.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### For Recruiters
+*   **Strategic Hiring**: Post and manage job opportunities with a comprehensive admin dashboard.
+*   **Organization Management**: Register and manage multiple company profiles and their respective listings.
+*   **Applicant Tracking**: View and evaluate candidates efficiently from a unified interface.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Engineering Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*   **Platform**: Next.js 14+ (App Router)
+*   **Core**: React, TypeScript, Node.js
+*   **Persistence**: MongoDB & Mongoose
+*   **Security**: NextAuth.js (Role-based Authentication)
+*   **Design System**: Tailwind CSS v4, shadcn/ui
+*   **Motion**: Framer Motion for premium micro-interactions
 
-## Learn More
+## 📦 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+To explore the development environment:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  Clone the repository and install dependencies: `npm install`
+2.  Set up your local environment variables in `.env.local` (see `.env.example`).
+3.  Launch the development server: `npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*This project is built from the ground up to provide a high-end experience for professional recruitment.*
