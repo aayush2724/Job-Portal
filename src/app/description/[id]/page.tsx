@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import { Input } from "@/components/ui/input";
 
 const JobDescription = ({ params }: { params: { id: string } }) => {
   const [applied, setApplied] = useState(false);
@@ -194,7 +195,7 @@ const JobDescription = ({ params }: { params: { id: string } }) => {
 
             <Card className="border-none shadow-xl bg-indigo-600 text-white rounded-3xl p-8 overflow-hidden relative group">
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
-                <h3 className="text-xl font-bold mb-4 relative z-10">Don't miss out!</h3>
+                <h3 className="text-xl font-bold mb-4 relative z-10">Don&apos;t miss out!</h3>
                 <p className="text-indigo-100 mb-6 relative z-10">Subscribe to our newsletter to receive the latest job updates directly in your inbox.</p>
                 <div className="relative z-10 space-y-4">
                     <Input placeholder="email@example.com" className="bg-white/10 border-white/20 placeholder:text-indigo-200 text-white h-12 rounded-xl" />
