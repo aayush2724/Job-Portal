@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { User, Mail, Phone, Code, FileText, Edit2, Plus, ArrowRight, Briefcase, MapPin } from "lucide-react";
+import { User, Mail, Phone, Code, FileText, Edit2, Plus, ArrowRight, Briefcase, MapPin, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,12 +14,12 @@ const Profile = () => {
   
   // Dummy user data
   const user = {
-    fullname: "Aayush Sharma",
+    fullname: "Aayush Kumar",
     email: "aayush@example.com",
     phoneNumber: "+91 9876543210",
     bio: "Passionate Full Stack Developer with a love for creating beautiful and functional web applications. Always learning new technologies.",
     skills: ["React", "Next.js", "Node.js", "MongoDB", "Tailwind CSS", "TypeScript"],
-    resume: "aayush_sharma_resume.pdf",
+    resume: "aayush_kumar_resume.pdf",
     appliedJobs: [
       { id: 1, title: "Frontend Developer", company: "Google", status: "Pending", date: "2024-03-12" },
       { id: 2, title: "Backend Engineer", company: "Microsoft", status: "Accepted", date: "2024-03-10" }
