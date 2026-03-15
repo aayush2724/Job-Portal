@@ -16,7 +16,7 @@ const Navbar = () => {
     { name: "Companies", href: "/companies" },
   ];
 
-  if (session?.user?.role === "recruiter") {
+  if ((session?.user as any)?.role === "recruiter") {
     navLinks.push({ name: "Post a Job", href: "/admin/jobs/create" });
   }
 
