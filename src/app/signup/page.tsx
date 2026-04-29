@@ -49,27 +49,32 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50/50 dark:bg-black p-4 pt-20">
+    <div className="min-h-screen flex items-center justify-center bg-background p-4 pt-24 relative overflow-hidden">
+      {/* Background blobs */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl -z-10 opacity-20 pointer-events-none">
+        <div className="absolute top-[20%] left-[20%] w-[400px] h-[400px] bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-md"
+        className="w-full max-w-md z-10 my-8"
       >
-        <Card className="border-none shadow-xl bg-white/80 backdrop-blur-md dark:bg-gray-900/80">
+        <Card className="border border-white/5 shadow-2xl bg-card">
           <CardHeader className="space-y-1 text-center">
-            <div className="flex justify-center mb-2">
-              <div className="p-3 bg-indigo-600 rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none">
-                <Briefcase className="w-8 h-8 text-white" />
+            <div className="flex justify-center mb-4">
+              <div className="p-3 bg-primary/10 border border-primary/20 rounded-2xl shadow-lg shadow-primary/20">
+                <Briefcase className="w-8 h-8 text-primary" />
               </div>
             </div>
-            <CardTitle className="text-2xl font-bold tracking-tight">Create an account</CardTitle>
-            <CardDescription>Enter your details to get started with JobPortal</CardDescription>
+            <CardTitle className="text-2xl font-bold tracking-tight text-white">Create an account</CardTitle>
+            <CardDescription className="text-muted-foreground">Enter your details to get started with JobPortal</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={submitHandler} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="fullname">Full Name</Label>
+                <Label htmlFor="fullname" className="text-white">Full Name</Label>
                 <Input
                   id="fullname"
                   name="fullname"
@@ -77,11 +82,11 @@ const Signup = () => {
                   required
                   value={input.fullname}
                   onChange={changeEventHandler}
-                  className="bg-gray-50/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700"
+                  className="bg-background border-white/10 text-white placeholder:text-muted-foreground/50 focus-visible:ring-primary"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
+                <Label htmlFor="email" className="text-white">Email Address</Label>
                 <Input
                   id="email"
                   name="email"
@@ -90,11 +95,11 @@ const Signup = () => {
                   required
                   value={input.email}
                   onChange={changeEventHandler}
-                  className="bg-gray-50/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700"
+                  className="bg-background border-white/10 text-white placeholder:text-muted-foreground/50 focus-visible:ring-primary"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="phoneNumber">Phone Number</Label>
+                <Label htmlFor="phoneNumber" className="text-white">Phone Number</Label>
                 <Input
                   id="phoneNumber"
                   name="phoneNumber"
@@ -102,11 +107,11 @@ const Signup = () => {
                   required
                   value={input.phoneNumber}
                   onChange={changeEventHandler}
-                  className="bg-gray-50/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700"
+                  className="bg-background border-white/10 text-white placeholder:text-muted-foreground/50 focus-visible:ring-primary"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password" className="text-white">Password</Label>
                 <Input
                   id="password"
                   name="password"
@@ -115,36 +120,36 @@ const Signup = () => {
                   required
                   value={input.password}
                   onChange={changeEventHandler}
-                  className="bg-gray-50/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700"
+                  className="bg-background border-white/10 text-white placeholder:text-muted-foreground/50 focus-visible:ring-primary"
                 />
               </div>
 
               <div className="space-y-3 pt-2">
-                <Label>I am a:</Label>
+                <Label className="text-white">I am a:</Label>
                 <RadioGroup
                   defaultValue="student"
                   className="flex space-x-4"
                   onValueChange={(value) => setInput({ ...input, role: value })}
                 >
-                  <div className="flex items-center space-x-2 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex-1 cursor-pointer">
+                  <div className="flex items-center space-x-2 bg-background border border-white/10 p-3 rounded-xl flex-1 cursor-pointer hover:border-primary/50 transition-colors">
                     <RadioGroupItem value="student" id="student" />
-                    <Label htmlFor="student" className="cursor-pointer">Student</Label>
+                    <Label htmlFor="student" className="cursor-pointer text-white">Student</Label>
                   </div>
-                  <div className="flex items-center space-x-2 bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex-1 cursor-pointer">
+                  <div className="flex items-center space-x-2 bg-background border border-white/10 p-3 rounded-xl flex-1 cursor-pointer hover:border-primary/50 transition-colors">
                     <RadioGroupItem value="recruiter" id="recruiter" />
-                    <Label htmlFor="recruiter" className="cursor-pointer">Recruiter</Label>
+                    <Label htmlFor="recruiter" className="cursor-pointer text-white">Recruiter</Label>
                   </div>
                 </RadioGroup>
               </div>
 
-              <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700 py-6 text-base font-semibold" disabled={loading}>
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 py-6 text-base font-semibold text-white shadow-lg shadow-primary/20 mt-2" disabled={loading}>
                 {loading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please wait</> : "Create Account"}
               </Button>
               
-              <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+              <p className="text-center text-sm text-muted-foreground mt-4">
                 Already have an account?{" "}
-                <Link href="/login" className="text-indigo-600 font-semibold hover:underline">
-                  Login here
+                <Link href="/login" className="text-primary font-semibold hover:underline">
+                  Log in here
                 </Link>
               </p>
             </form>
