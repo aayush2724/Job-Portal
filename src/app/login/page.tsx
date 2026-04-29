@@ -47,27 +47,32 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50/50 dark:bg-black p-4 pt-20">
+    <div className="min-h-screen flex items-center justify-center bg-background p-4 pt-20 relative overflow-hidden">
+      {/* Background blobs */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl -z-10 opacity-20 pointer-events-none">
+        <div className="absolute top-[20%] left-[20%] w-[400px] h-[400px] bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-md"
+        className="w-full max-w-md z-10"
       >
-        <Card className="border-none shadow-xl bg-white/80 backdrop-blur-md dark:bg-gray-900/80">
+        <Card className="border border-white/5 shadow-2xl bg-card">
           <CardHeader className="space-y-1 text-center">
-            <div className="flex justify-center mb-2">
-              <div className="p-3 bg-indigo-600 rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none">
-                <Briefcase className="w-8 h-8 text-white" />
+            <div className="flex justify-center mb-4">
+              <div className="p-3 bg-primary/10 border border-primary/20 rounded-2xl shadow-lg shadow-primary/20">
+                <Briefcase className="w-8 h-8 text-primary" />
               </div>
             </div>
-            <CardTitle className="text-2xl font-bold tracking-tight">Welcome back</CardTitle>
-            <CardDescription>Enter your credentials to access your account</CardDescription>
+            <CardTitle className="text-2xl font-bold tracking-tight text-white">Welcome back</CardTitle>
+            <CardDescription className="text-muted-foreground">Enter your credentials to access your account</CardDescription>
           </CardHeader>
           <CardContent>
-            <form onSubmit={submitHandler} className="space-y-4">
+            <form onSubmit={submitHandler} className="space-y-5">
               <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
+                <Label htmlFor="email" className="text-white">Email Address</Label>
                 <Input
                   id="email"
                   name="email"
@@ -76,13 +81,13 @@ const Login = () => {
                   required
                   value={input.email}
                   onChange={changeEventHandler}
-                  className="bg-gray-50/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700"
+                  className="bg-background border-white/10 text-white placeholder:text-muted-foreground/50 focus-visible:ring-primary"
                 />
               </div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="password">Password</Label>
-                  <Link href="#" className="text-xs text-indigo-600 hover:underline">Forgot password?</Link>
+                  <Label htmlFor="password" className="text-white">Password</Label>
+                  <Link href="#" className="text-xs text-primary hover:underline">Forgot password?</Link>
                 </div>
                 <Input
                   id="password"
@@ -92,17 +97,17 @@ const Login = () => {
                   required
                   value={input.password}
                   onChange={changeEventHandler}
-                  className="bg-gray-50/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700"
+                  className="bg-background border-white/10 text-white placeholder:text-muted-foreground/50 focus-visible:ring-primary"
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700 py-6 text-base font-semibold mt-4" disabled={loading}>
-                {loading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please wait</> : "Login"}
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 py-6 text-base font-semibold mt-4 text-white shadow-lg shadow-primary/20" disabled={loading}>
+                {loading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please wait</> : "Log in"}
               </Button>
               
-              <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-6">
+              <p className="text-center text-sm text-muted-foreground mt-6">
                 Don&apos;t have an account?{" "}
-                <Link href="/signup" className="text-indigo-600 font-semibold hover:underline">
+                <Link href="/signup" className="text-primary font-semibold hover:underline">
                   Sign up for free
                 </Link>
               </p>
